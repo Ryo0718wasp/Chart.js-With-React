@@ -5,40 +5,15 @@ class Chart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      chartData: {
-        labels: [
-          "Boston",
-          "Worcester",
-          "Springfiled",
-          "Lowell",
-          "Cambridge",
-          "New Bedford",
-        ],
-        datasets: [
-          {
-            label: '人口',
-            data: [
-              644292, 905450, 376785, 429748, 155463, 403136
-            ],
-            backgroundColor: [
-              "rgba(255,  99, 132, 0.6)",
-              "rgba(54, 162, 235, 0.6)",
-              "rgba(255, 206, 86, 0.6)",
-              "rgba(75, 192, 192, 0.6)",
-              "rgba(153, 102, 255, 0.6)",
-              "rgba(255, 159, 64, 0.6)",
-              "rgba(255, 99, 132, 0.6)",
-            ]
-          }
-        ]
-      }
+      chartData: props.chartData
     }
   }
 
   static defaultProps = {
     displayTitle: true,
     displayLegend: true,
-    legendPosition: 'right'
+    legendPosition: 'right',
+    location: 'City'
   }
   render() {
     return (
@@ -48,7 +23,35 @@ class Chart extends Component {
           options={{
             title: {
               display: this.props.displayTitle,
-              text: 'Largets Cities In Massatusetts',
+              text: 'Largets Cities In ' + this.props.location,
+              fontSize: 25
+            },
+            legend: {
+              display: this.props.displayLegend,
+              position: this.props.legendPosition
+            }
+          }}
+        />
+        <Line
+          data={this.state.chartData}
+          options={{
+            title: {
+              display: this.props.displayTitle,
+              text: 'Largets Cities In ' + this.props.location,
+              fontSize: 25
+            },
+            legend: {
+              display: this.props.displayLegend,
+              position: this.props.legendPosition
+            }
+          }}
+        />
+        <Pie
+          data={this.state.chartData}
+          options={{
+            title: {
+              display: this.props.displayTitle,
+              text: 'Largets Cities In ' + this.props.location,
               fontSize: 25
             },
             legend: {
