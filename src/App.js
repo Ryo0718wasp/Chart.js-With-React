@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Chart from './components/Chart';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,17 +12,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <button onClick={() => setCount(count + 1)}>Plus</button>
-        <button onClick={() => setCount(count - 1)}>minus</button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Chart legendPosition="bottom" />
     </div>
   );
 }
