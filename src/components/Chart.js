@@ -56,6 +56,7 @@ class Chart extends Component {
   render() {
     return (
       <div className="chart">
+        <h2>Chart-js-2</h2>
         <Link to="/charttwo">
           <button>
             show PageTwo when you click this!!
@@ -70,7 +71,7 @@ class Chart extends Component {
               responsive: false,
               title: {
                 display: this.props.displayTitle,
-                text: 'Largets Cities In ' + this.props.location,
+                text: 'Largets Cities In ',
                 fontSize: 25
               },
               legend: {
@@ -87,7 +88,7 @@ class Chart extends Component {
               responsive: false,
               title: {
                 display: this.props.displayTitle,
-                text: 'Largets Cities In ' + this.props.location,
+                text: 'Largets Cities In ',
                 fontSize: 25
               },
               legend: {
@@ -104,7 +105,7 @@ class Chart extends Component {
               responsive: false,
               title: {
                 display: this.props.displayTitle,
-                text: 'Largets Cities In ' + this.props.location,
+                text: 'Largets Cities In ',
                 fontSize: 25
               },
               legend: {
@@ -123,7 +124,7 @@ class Chart extends Component {
               responsive: false,
               title: {
                 display: this.props.displayTitle,
-                text: 'Largets Cities In ' + this.props.location,
+                text: 'Largets Cities In ',
                 fontSize: 25
               },
               legend: {
@@ -140,7 +141,7 @@ class Chart extends Component {
               responsive: false,
               title: {
                 display: this.props.displayTitle,
-                text: 'Largets Cities In ' + this.props.location,
+                text: 'Largets Cities In ',
                 fontSize: 25
               },
               legend: {
@@ -157,7 +158,7 @@ class Chart extends Component {
               responsive: false,
               title: {
                 display: this.props.displayTitle,
-                text: 'Largets Cities In ' + this.props.location,
+                text: 'アカウント診断シート ',
                 fontSize: 25
               },
               legend: {

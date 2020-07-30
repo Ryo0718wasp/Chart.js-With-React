@@ -6,6 +6,14 @@
 .App {
   text-align: center;
 }
+.wrapper {
+  width: 100%;
+  height: 600;
+}
+.graphItem {
+  width: 100%;
+  height: 600;
+}
 
 .App-logo {
   height: 40vmin;

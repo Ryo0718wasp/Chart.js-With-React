@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { Bar, Line, Pie, Polar, HorizontalBar, Radar } from 'react-chartjs-2';
 import { Link } from 'react-router-dom';
+// import RechartVer from '../components/Rechart/RechartVer';
+import RechartPie from '../components/Rechart/RechartPie';
+import RechartBarChart from '../components/Rechart/RechartBarChart';
+import RechartArea from '../components/Rechart/RechartArea';
+import RechartRadar from '../components/Rechart/RechartRadar';
 
 class Chart extends Component {
   constructor(props) {
@@ -19,68 +23,28 @@ class Chart extends Component {
   render() {
     return (
       <div className="chart">
+        <div className="chart-grid">
+          <h2>Rechart Ver</h2>
+        </div>
+        <div className="chart-grid">
+          {/* <RechartVer /> */}
+          <RechartPie />
+          <RechartBarChart />
+        </div>
+        <div className="chart-grid">
+          <RechartArea />
+          <RechartRadar />
+        </div>
         <Link to="/">
           <button>
             show PageTwo when you click this!!
         </button>
         </Link>
-        <div className="chart-grid">
-          <h2>seconnd</h2>
-        </div>
-        <div className="chart-grid">
-          <Polar
-            data={this.state.chartData}
-            width={600}
-            height={600}
-            options={{
-              responsive: false,
-              title: {
-                display: this.props.displayTitle,
-                text: 'Largets Cities In ' + this.props.location,
-                fontSize: 25
-              },
-              legend: {
-                display: this.props.displayLegend,
-                position: this.props.legendPosition
-              }
-            }}
-          />
-          <Pie
-            data={this.state.chartData}
-            width={600}
-            height={600}
-            options={{
-              responsive: false,
-              title: {
-                display: this.props.displayTitle,
-                text: 'Largets Cities In ' + this.props.location,
-                fontSize: 25
-              },
-              legend: {
-                display: this.props.displayLegend,
-                position: this.props.legendPosition
-              }
-            }}
-          />
-          <Radar
-            data={this.state.chartData}
-            width={600}
-            height={600}
-            options={{
-              responsive: false,
-              title: {
-                display: this.props.displayTitle,
-                text: 'Largets Cities In ' + this.props.location,
-                fontSize: 25
-              },
-              legend: {
-                display: this.props.displayLegend,
-                position: this.props.legendPosition
-              }
-            }}
-          />
-        </div>
-
+        <Link to="/chartthree">
+          <button>
+            show PageTwo when you click this!!
+        </button>
+        </Link>
       </div>
     );
   }
