@@ -12,6 +12,7 @@ const AppRoute = () => {
         <Route path="/" exact component={Chart} />
         <Route path="/charttwo" component={Rechart} />
         <Route path="/chartthree" component={Nivo} />
+        {/* <Route path="/chartfour" component={Nivo} /> */}
       </BrowserRouter>
     </div>
   );
